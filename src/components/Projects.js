@@ -5,7 +5,7 @@ import { SiGithub } from 'react-icons/si';
 
 export default function Projects() {
   return (
-    <section className='section-project container'>
+    <section className='section-project container' id='projects'>
       <h2 className='section-title'>Projects</h2>
       {projectsData.map(project => (
         <div className='project'>
@@ -29,7 +29,7 @@ export default function Projects() {
                   Demo <FaLaptop />
                 </a>
               </button>
-              <button className='button'>
+              <button className='button' data-inverted>
                 <a
                   href={project.codeURL}
                   target='_blank'

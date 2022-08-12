@@ -8,7 +8,8 @@ export default function Hero() {
           Hi I'm Tiago | Frontend <span>Developer</span>
         </h1>
         <p className='paragraph'>
-          I love exploring and creating. I'm a life long learner.
+          I love creating and exploring 🚀 I'm a life long learner 🎓 and I love
+          running 🏃‍♂️
         </p>
       </div>
       <img src={HeroImage}></img>

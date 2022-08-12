@@ -68,16 +68,18 @@ svg {
 @import url('https://use.typekit.net/quj2ido.css');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
-$size-smaller: 0.3125rem;
-$size-small: 0.625rem;
-$size-medium: 1rem;
-$size-medium-large: 1.5rem;
-$size-large: 2rem;
-$size-large-larger: 6.5rem;
-$size-larger: 10rem;
+$size-100: 0.3125rem;
+$size-200: 0.625rem;
+$size-300: 1rem;
+$size-400: 1.5rem;
+$size-500: 2rem;
+$size-600: 4rem;
+$size-700: 6.5rem;
+$size-800: 10rem;
 
-$color-default: #121e27;
+$color-default: #222222;
 $color-accent: #21c998;
+$color-accent-darken: darken($color-accent, 10);
 $color-selected: #8dc2ed;
 
 $fw-regular: 400;
@@ -86,6 +88,16 @@ $fw-bold: 700;
 
 $ff-paragraph: muli, sans-serif;
 $ff-title: 'Montserrat', sans-serif;
+
+.color-default {
+  color: $color-default;
+}
+.color-accent {
+  color: $color-accent;
+}
+.color-selected {
+  color: $color-selected;
+}
 
 .fw-regular {
   font-weight: $fw-regular;
@@ -136,21 +148,24 @@ $ff-title: 'Montserrat', sans-serif;
   @include font-size(1.25rem, 1.5rem, 1.875rem, 2.5rem, 3rem);
 }
 
-.color-default {
-  color: $color-default;
-}
-.color-accent {
-  color: $color-accent;
-}
-.color-selected {
-  color: $color-selected;
-}
-
 .section-title {
+  display: inline-block;
+  position: relative;
   @extend .fs-section-title;
   @extend .fw-semi-bold;
   @extend .ff-paragraph;
   @extend .color-default;
+}
+
+.section-title::before {
+  z-index: -10;
+  content: '';
+  position: absolute;
+  width: 98%;
+  height: 0;
+  bottom: 12px;
+  left: 5%;
+  border-bottom: 15px solid $color-accent;
 }
 
 .sub-title {
@@ -186,17 +201,18 @@ $ff-title: 'Montserrat', sans-serif;
 }
 
 .button {
-  border: none;
-  border-radius: $size-larger;
+  border: 3px solid $color-accent;
+  border-radius: $size-800;
   background-color: $color-accent;
   cursor: pointer;
   &:hover {
-    background-color: darken($color-accent, 10);
+    background-color: $color-accent-darken;
+    border: 3px solid $color-accent-darken;
   }
   a {
     @extend .center;
     @extend .paragraph;
-    gap: $size-small;
+    gap: $size-200;
     font-weight: $fw-bold;
     color: white;
     width: 120px;
@@ -207,8 +223,22 @@ $ff-title: 'Montserrat', sans-serif;
   }
 }
 
+.button[data-inverted] {
+  border: 3px solid $color-default;
+  background-color: white;
+  &:hover {
+    background-color: $color-default;
+  }
+  a {
+    color: $color-default;
+  }
+  a:hover {
+    color: white;
+  }
+}
+
 .container {
-  $padding: 70px;
+  $padding: 80px;
   $max-width: 1000px;
 
   width: min($max-width, 100% - $padding);
@@ -216,30 +246,27 @@ $ff-title: 'Montserrat', sans-serif;
 }
 
 a {
+  cursor: pointer;
   text-decoration: none;
   color: $color-default;
 
   &:hover {
-    color: lighten($color: $color-default, $amount: 15);
+    color: lighten($color: $color-default, $amount: 20);
   }
 }
 
 span {
-  color: darken($color-accent, 10);
+  color: $color-accent-darken;
 }
 
 ul {
   list-style: none;
 }
 
-.flex {
-  display: flex;
-}
-
 nav {
   height: auto;
   width: 100%;
-  padding-top: $size-medium;
+  padding-top: $size-300;
   text-align: center;
 }
 
@@ -251,18 +278,26 @@ nav {
   position: absolute;
   width: 100%;
   background-color: white;
-  padding-top: $size-small;
+  padding-block: $size-200;
+  :not(:last-child) {
+    margin-bottom: $size-400;
+  }
+  @media (min-width: 50em) {
+    padding-block: 0;
+    padding-top: $size-200;
+  }
   @extend .fs-paragraph;
   font-weight: $fw-bold;
   font-family: $ff-paragraph;
   a {
-    &:hover {
-      text-decoration-thickness: 3px;
-      text-decoration-style: double;
-    }
     text-decoration: underline 5px $color-accent;
     text-decoration-skip-ink: none;
     text-underline-offset: 5px;
+    &:hover {
+      text-decoration-color: $color-accent-darken;
+      text-decoration-style: double;
+      text-decoration-thickness: 3px;
+    }
   }
 }
 
@@ -270,7 +305,7 @@ nav {
   cursor: pointer;
   color: $color-default;
   right: 2rem;
-  top: $size-medium;
+  top: $size-300;
   position: absolute;
 }
 
@@ -301,110 +336,129 @@ nav {
     max-height: 400px;
     width: 100%;
   }
-  padding-inline: $size-medium;
+  padding-inline: $size-300;
   text-align: center;
 }
 
-.about {
+.about > .section-title {
+  margin-bottom: $size-200;
+}
+
+.about-grid {
   display: grid;
-  h1 {
-    margin-bottom: $size-small;
-  }
+  margin-bottom: $size-500;
   img {
     justify-self: center;
-    margin-bottom: $size-large;
+    margin-bottom: $size-500;
     border-radius: 25px;
+  }
+
+  @media (min-width: 50em) {
+    img {
+      justify-self: flex-start;
+    }
+
+    margin-bottom: $size-600;
+    grid-auto-flow: column;
+    grid-auto-columns: auto;
+    gap: $size-500;
   }
 }
 
-@media (min-width: 50em) {
-  .about {
-    align-items: center;
-    gap: $size-medium-large;
-    grid-template-areas:
-      'title title'
-      'image text';
-
-    h1 {
-      grid-area: title;
-      margin-bottom: -10px;
-    }
-    img {
-      grid-area: image;
-    }
-    p {
-      grid-area: text;
-    }
+.skills {
+  margin-bottom: $size-500;
+  @media (min-width: 50em) {
+    margin-bottom: $size-600;
   }
 }
 
 .skills-card {
   display: flex;
-  gap: $size-medium-large;
-  padding-block: $size-small;
+  gap: $size-200;
+  padding-block: $size-300;
+
+  @media (min-width: 50em) {
+    gap: $size-400;
+  }
 
   .skill {
     @extend .center;
     flex-direction: column;
     img {
-      width: 40px;
-      height: 40px;
+      width: 35px;
+      height: 35px;
       @media (min-width: 30em) {
         width: 70px;
         height: 70px;
       }
+    }
+    p {
+      font-size: 18px;
     }
   }
 }
 
 .project {
   display: grid;
-  gap: $size-large;
+  gap: $size-600;
   &:not(:last-child) {
-    margin-bottom: $size-large-larger;
-  }
-
-  @media (min-width: 50em) {
-    &:not(:last-child) {
-      margin-bottom: $size-larger;
+    margin-bottom: $size-600;
+    @media (min-width: 50em) {
+      margin-bottom: $size-700;
     }
-    grid-template-columns: 1fr 0.8fr;
   }
-}
+  img {
+    width: 450px;
+  }
 
-.project-info {
-  margin-bottom: $size-medium;
+  @media (min-width: 60em) {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: $size-400;
+    &:not(:last-child) {
+      margin-bottom: $size-700;
+    }
+  }
 }
 
 .project-title {
+  @extend .ff-title;
   color: $color-default;
   font-size: 64px;
-  @extend .ff-title;
 }
 
 .project-skills {
   display: flex;
-  gap: $size-small;
+  flex-wrap: wrap;
+  gap: $size-200;
 
   .project-skill {
-    border-radius: $size-small;
-    padding: $size-smaller $size-small;
-    color: $color-default;
-    border: 2px solid $color-accent;
     @extend .center;
-    gap: $size-small;
+    border-radius: $size-200;
+    padding: $size-100 $size-200;
+    color: $color-default;
+    border: 2px solid $color-accent-darken;
+    gap: $size-200;
   }
 }
 
-.section-project {
-  margin-bottom: $size-large-larger;
+.project-info {
+  max-width: 600px;
+  & > *:not(:last-child) {
+    margin-bottom: $size-300;
+  }
 }
 
-.contact {
+.project {
+  margin-bottom: $size-600;
+}
+
+.contact-flex {
   display: grid;
-  gap: calc($size-large + 10px);
+  gap: $size-600;
 
   @media (min-width: 50em) {
+    gap: 0;
     grid-template-columns: 1fr 1fr;
     flex-direction: row;
     justify-content: center;
@@ -413,13 +467,12 @@ nav {
     }
   }
   h1 {
-    margin-bottom: $size-small;
+    margin-bottom: $size-100;
   }
   form {
-    padding-right: $size-large;
     display: flex;
     flex-direction: column;
-    gap: $size-medium;
+    gap: $size-400;
 
     & > :is(input, textarea):is(:focus-visible) {
       border: 2px solid $color-selected;
@@ -427,12 +480,17 @@ nav {
 
     input,
     textarea {
-      padding-left: $size-small;
+      padding-left: $size-200;
       height: 60px;
       border: 0;
       border-bottom: 2px solid $color-accent;
       border-right: 2px solid $color-accent;
       outline: 0;
+    }
+
+    textarea {
+      resize: none;
+      height: 100px !important;
     }
 
     button {
@@ -445,10 +503,16 @@ nav {
 
 .contact-socials {
   @extend .center;
+  .sub-title {
+    font-size: 21px;
+  }
   flex-direction: column;
   .center {
-    margin-top: $size-small;
-    gap: $size-medium-large;
+    margin-top: $size-300;
+    gap: $size-400;
   }
-  margin-bottom: $size-large-larger;
+}
+
+.contact {
+  padding-bottom: $size-600;
 }

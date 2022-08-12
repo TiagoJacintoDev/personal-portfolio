@@ -2,9 +2,9 @@ import { SiLinkedin, SiGithub } from 'react-icons/si';
 
 export default function Contact() {
   return (
-    <div className='container'>
+    <div className='contact | container' id='contact'>
       <h2 className='section-title'>Contact</h2>
-      <div className='contact'>
+      <div className='contact-flex'>
         <div>
           <h1 className='sub-title'>Get In Touch</h1>
 
@@ -22,7 +22,7 @@ export default function Contact() {
         <div className='contact-socials'>
           <h2 className='paragraph'>Write me an e-mail at:</h2>
           <a className='sub-title' href='mailto:tiagojacintodev@gmail.com'>
-            tiagojacintodev@gmail.com ↗
+            tiagojacintodev@gmail.com
           </a>
           <br />
           <h2 className='paragraph'>OR</h2>
