@@ -76,10 +76,6 @@ svg {
   color: #21c998;
 }
 
-.color-selected {
-  color: #8dc2ed;
-}
-
 .fw-regular, .paragraph, .button a {
   font-weight: 400;
 }
@@ -454,9 +450,6 @@ nav {
   flex-direction: column;
   gap: 1.5rem;
 }
-.contact-flex form > :is(input, textarea):is(:focus-visible) {
-  border: 2px solid #8dc2ed;
-}
 .contact-flex form input,
 .contact-flex form textarea {
   padding-left: 0.625rem;
@@ -479,8 +472,10 @@ nav {
 .contact-socials {
   flex-direction: column;
 }
-.contact-socials .sub-title {
-  font-size: 21px;
+@media (max-width: 50em) {
+  .contact-socials .sub-title {
+    font-size: 21px;
+  }
 }
 .contact-socials .center, .contact-socials .button a, .button .contact-socials a, .contact-socials .skills-card .skill, .skills-card .contact-socials .skill, .contact-socials .project-skills .project-skill, .project-skills .contact-socials .project-skill, .contact-socials .contact-socials {
   margin-top: 1rem;

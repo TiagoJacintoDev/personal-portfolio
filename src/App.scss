@@ -80,7 +80,6 @@ $size-800: 10rem;
 $color-default: #222222;
 $color-accent: #21c998;
 $color-accent-darken: darken($color-accent, 10);
-$color-selected: #8dc2ed;
 
 $fw-regular: 400;
 $fw-semi-bold: 500;
@@ -94,9 +93,6 @@ $ff-title: 'Montserrat', sans-serif;
 }
 .color-accent {
   color: $color-accent;
-}
-.color-selected {
-  color: $color-selected;
 }
 
 .fw-regular {
@@ -474,10 +470,6 @@ nav {
     flex-direction: column;
     gap: $size-400;
 
-    & > :is(input, textarea):is(:focus-visible) {
-      border: 2px solid $color-selected;
-    }
-
     input,
     textarea {
       padding-left: $size-200;
@@ -503,9 +495,12 @@ nav {
 
 .contact-socials {
   @extend .center;
-  .sub-title {
-    font-size: 21px;
+  @media (max-width: 50em) {
+    .sub-title {
+      font-size: 21px;
+    }
   }
+
   flex-direction: column;
   .center {
     margin-top: $size-300;
