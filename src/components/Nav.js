@@ -11,7 +11,11 @@ export default function Nav() {
   }
   return (
     <nav>
-      <Link href='/' className='fs-paragraph nav-logo ff-paragraph fw-bold'>
+      <Link
+        style={{ transition: 'color 500ms' }}
+        href='/'
+        className='fs-paragraph nav-logo ff-paragraph fw-bold'
+      >
         Tiago Jacinto
       </Link>
       <ul className='nav-list' data-hidden={navListHidden}>

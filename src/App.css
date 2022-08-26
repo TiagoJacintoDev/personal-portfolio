@@ -51,22 +51,6 @@ svg {
   display: block;
 }
 
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-  *,
-*::before,
-*::after {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
 /* #endregion */
 .color-default, .hero-title, .paragraph, .button a, .sub-title, .section-title {
   color: #222222;
@@ -179,12 +163,14 @@ svg {
   border-radius: 10rem;
   background-color: #21c998;
   cursor: pointer;
+  transition: all 500ms;
 }
 .button:hover {
   background-color: #1a9d77;
   border: 3px solid #1a9d77;
 }
 .button a {
+  transition: all 500ms;
   gap: 0.625rem;
   font-weight: 700;
   color: white;
@@ -198,6 +184,7 @@ svg {
 .button[data-inverted] {
   border: 3px solid #222222;
   background-color: white;
+  transition: all 500ms;
 }
 .button[data-inverted]:hover {
   background-color: #222222;
@@ -218,6 +205,7 @@ a {
   cursor: pointer;
   text-decoration: none;
   color: #222222;
+  transition: all 500ms;
 }
 a:hover {
   color: #555555;
@@ -265,6 +253,7 @@ nav {
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
   text-underline-offset: 5px;
+  transition: all 1s;
 }
 .nav-list a:hover {
   -webkit-text-decoration-color: #1a9d77;
@@ -467,6 +456,10 @@ nav {
   color: white;
   width: 150px;
   height: 45px;
+}
+.contact-flex form :is(input, textarea):is(:focus-visible) {
+  transition: all 500ms;
+  border-color: #8dc2ed;
 }
 
 .contact-socials {

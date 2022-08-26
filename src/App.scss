@@ -47,22 +47,6 @@ svg {
   max-width: 100%;
   display: block;
 }
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
 /* #endregion */
 
 @import url('https://use.typekit.net/quj2ido.css');
@@ -80,6 +64,7 @@ $size-800: 10rem;
 $color-default: #222222;
 $color-accent: #21c998;
 $color-accent-darken: darken($color-accent, 10);
+$color-active: #8dc2ed;
 
 $fw-regular: 400;
 $fw-semi-bold: 500;
@@ -201,11 +186,13 @@ $ff-title: 'Montserrat', sans-serif;
   border-radius: $size-800;
   background-color: $color-accent;
   cursor: pointer;
+  transition: all 500ms;
   &:hover {
     background-color: $color-accent-darken;
     border: 3px solid $color-accent-darken;
   }
   a {
+    transition: all 500ms;
     @extend .center;
     @extend .paragraph;
     gap: $size-200;
@@ -222,6 +209,7 @@ $ff-title: 'Montserrat', sans-serif;
 .button[data-inverted] {
   border: 3px solid $color-default;
   background-color: white;
+  transition: all 500ms;
   &:hover {
     background-color: $color-default;
   }
@@ -246,6 +234,7 @@ a {
   text-decoration: none;
   color: $color-default;
 
+  transition: all 500ms;
   &:hover {
     color: lighten($color: $color-default, $amount: 20);
   }
@@ -289,6 +278,9 @@ nav {
     text-decoration: underline 5px $color-accent;
     text-decoration-skip-ink: none;
     text-underline-offset: 5px;
+
+    transition: all 1s;
+
     &:hover {
       text-decoration-color: $color-accent-darken;
       text-decoration-style: double;
@@ -489,6 +481,11 @@ nav {
       color: white;
       width: 150px;
       height: 45px;
+    }
+
+    :is(input, textarea):is(:focus-visible) {
+      transition: all 500ms;
+      border-color: $color-active;
     }
   }
 }
