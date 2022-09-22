@@ -1,49 +1,72 @@
-import { SiReact, SiJavascript, SiSass } from 'react-icons/si';
-import Project from '../images/ing.png';
+import {
+  SiReact,
+  SiJavascript,
+  SiCss3,
+  SiStyledcomponents,
+} from 'react-icons/si';
+import CVMaker from '../images/cv-maker.png';
+import TravelLandingPage from '../images/travel-landing-page.png';
+import GitHubSearch from '../images/github-search.png';
 
 export const projectsData = [
   {
-    title: 'Title',
+    title: 'CV Maker',
     skills: [
+      {
+        text: 'React',
+        img: <SiReact />,
+      },
+      { text: 'JavaScript', img: <SiJavascript /> },
+      { text: 'CSS Modules', img: <SiCss3 /> },
+    ],
+    description:
+      "A CV Maker app that updates/changes the CV when you type your information out. With this project I've worked mostly with a large state management and controlled inputs.",
+    demoURL: 'https://cv-makerapp.vercel.app/',
+    codeURL: 'https://github.com/TiagoJacintoDev/cv-maker',
+    img: CVMaker,
+  },
+  {
+    title: 'Travel Landing Page',
+    skills: [
+      {
+        text: 'React',
+        img: <SiReact />,
+      },
       {
         text: 'JavaScript',
         img: <SiJavascript />,
       },
-      { text: 'Sass', img: <SiSass /> },
-      { text: 'React', img: <SiReact /> },
+      {
+        text: 'styled-components',
+        img: <SiStyledcomponents />,
+      },
     ],
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, a deleniti? Possimus sit quos omnis, veritatis quisquam et maxime maiores labore soluta natus nulla ab laudantium laborum recusandae vero dolor!Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, a deleniti? Possimus sit quos omnis, veritatis quisquam et maxime maiores labore soluta natus nulla ab laudantium laborum recusandae vero dolor!',
-    demoURL: 'https://www.google.com/',
-    codeURL: 'https://www.google.com/',
-    img: Project,
-    img2: 'https://dummyimage.com/350x650.png',
+      'This project is a travel agency landing page with a mobile first design. My main focus for this project was to have a visually appealing page with responsive functionality. ',
+    demoURL: 'https://travel-landing-pageapp.vercel.app/',
+    codeURL: 'https://github.com/TiagoJacintoDev/travel-landing-page',
+    img: TravelLandingPage,
   },
   {
-    title: 'Title',
+    title: 'GitHub Search',
+    skills: [
+      {
+        text: 'React',
+        img: <SiReact />,
+      },
+      {
+        text: 'JavaScript',
+        img: <SiJavascript />,
+      },
+      {
+        text: 'CSS',
+        img: <SiCss3 />,
+      },
+    ],
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, a deleniti? Possimus sit quos omnis, veritatis quisquam et maxime maiores labore soluta natus nulla ab laudantium laborum recusandae vero dolor!',
-    demoURL: 'https://www.google.com/',
-    codeURL: 'https://www.google.com/',
-    img: 'https://dummyimage.com/350x650.png',
-    img2: 'https://dummyimage.com/350x650.png',
-  },
-  {
-    title: 'Title',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, a deleniti? Possimus sit quos omnis, veritatis quisquam et maxime maiores labore soluta natus nulla ab laudantium laborum recusandae vero dolor!',
-    demoURL: 'https://www.google.com/',
-    codeURL: 'https://www.google.com/',
-    img: 'https://dummyimage.com/350x650.png',
-    img2: 'https://dummyimage.com/350x650.png',
-  },
-  {
-    title: 'Title',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, a deleniti? Possimus sit quos omnis, veritatis quisquam et maxime maiores labore soluta natus nulla ab laudantium laborum recusandae vero dolor!',
-    demoURL: 'https://www.google.com/',
-    codeURL: 'https://www.google.com/',
-    img: 'https://dummyimage.com/350x650.png',
-    img2: 'https://dummyimage.com/350x650.png',
+      "In this app I've worked with the GitHub Search API to make a search application with the API. With this application I've improved my skills with fetching data from APIs, changing and filtering state, debouncing functions and pagination",
+    demoURL: 'https://github-searchapp.vercel.app/',
+    codeURL: 'https://github.com/TiagoJacintoDev/github-search-api',
+    img: GitHubSearch,
   },
 ];

@@ -1,6 +1,4 @@
-import Bootstrap from '../images/bootstrap_4-icon.png';
 import CSharp from '../images/c-sharp-c.svg';
-import Jest from '../images/file-type-jest.svg';
 import JavaScript from '../images/icons8-javascript.svg';
 import CSS from '../images/icons8-css3.svg';
 import HTML from '../images/icons8-html-5.svg';
@@ -29,10 +27,8 @@ export const skillsData = [
     type: 'Frameworks/Libraries',
     list: [
       { text: 'React', img: React },
-      { text: 'Jest', img: Jest },
-      { text: 'Unity', img: Unity },
-      { text: 'Bootstrap', img: Bootstrap },
       { text: 'Redux', img: Redux },
+      { text: 'Unity', img: Unity },
     ],
   },
   {
