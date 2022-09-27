@@ -3,10 +3,12 @@ import {
   SiJavascript,
   SiCss3,
   SiStyledcomponents,
+  SiFramer,
 } from 'react-icons/si';
 import CVMaker from '../images/cv-maker.png';
 import TravelLandingPage from '../images/travel-landing-page.png';
 import GitHubSearch from '../images/github-search.png';
+import RentACarLandingPage from '../images/rent-a-car-landing-page.png';
 
 export const projectsData = [
   {
@@ -68,5 +70,31 @@ export const projectsData = [
     demoURL: 'https://github-searchapp.vercel.app/',
     codeURL: 'https://github.com/TiagoJacintoDev/github-search-api',
     img: GitHubSearch,
+  },
+  {
+    title: 'Rent a Car Landing Page',
+    skills: [
+      {
+        text: 'React',
+        img: <SiReact />,
+      },
+      {
+        text: 'JavaScript',
+        img: <SiJavascript />,
+      },
+      {
+        text: 'styled-components',
+        img: <SiStyledcomponents />,
+      },
+      {
+        text: 'Framer Motion',
+        img: <SiFramer />,
+      },
+    ],
+    description:
+      'A landing page using the Eleanor Auto website design. This was my first time working with animations. My main challenge here was managing exit animations & positioning images depending on the media screen. Other than that I managed to improve on file structure & defining props with objects',
+    demoURL: 'https://rent-a-car-landing-page-tiagojacintodev.vercel.app/',
+    codeURL: 'https://github.com/TiagoJacintoDev/rent-a-car-landing-page',
+    img: RentACarLandingPage,
   },
 ];
