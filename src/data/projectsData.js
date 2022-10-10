@@ -9,6 +9,7 @@ import CVMaker from '../images/cv-maker.png';
 import TravelLandingPage from '../images/travel-landing-page.png';
 import GitHubSearch from '../images/github-search.png';
 import RentACarLandingPage from '../images/rent-a-car-landing-page.png';
+import DogWiki from '../images/dog-wiki-app.vercel.app_.png';
 
 export const projectsData = [
   {
@@ -92,9 +93,38 @@ export const projectsData = [
       },
     ],
     description:
+      "In this application you can search for different dog breeds and get to know about them. I've used this API to fetch data from.",
+    demoURL: 'https://dog-wiki-app.vercel.app/',
+    codeURL: 'https://github.com/TiagoJacintoDev/dog-wiki',
+    img: RentACarLandingPage,
+  },
+  {
+    title: 'Dog Wiki',
+    skills: [
+      {
+        text: 'React',
+        img: <SiReact />,
+      },
+      {
+        text: 'JavaScript',
+        img: <SiJavascript />,
+      },
+      {
+        text: 'React Query',
+      },
+      {
+        text: 'styled-components',
+        img: <SiStyledcomponents />,
+      },
+
+      {
+        text: 'Axios',
+      },
+    ],
+    description:
       'A landing page using the Eleanor Auto website design. This was my first time working with animations. My main challenge here was managing exit animations & positioning images depending on the media screen. Other than that I managed to improve on file structure & defining props with objects',
     demoURL: 'https://rent-a-car-landing-page-tiagojacintodev.vercel.app/',
     codeURL: 'https://github.com/TiagoJacintoDev/rent-a-car-landing-page',
-    img: RentACarLandingPage,
+    img: DogWiki,
   },
 ];
