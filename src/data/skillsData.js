@@ -9,7 +9,8 @@ import Linux from '../images/linux.png';
 import npm from '../images/icons8-npm.svg';
 import Unity from '../images/icons8-unity.svg';
 import React from '../images/icons8-react-native.svg';
-import Redux from '../images/icons8-redux.svg';
+import Tailwind from '../images/icons8-tailwind-css.svg';
+import Firebase from '../images/icons8-firebase.svg';
 import SASS from '../images/icons8-sass.svg';
 
 export const skillsData = [
@@ -27,7 +28,8 @@ export const skillsData = [
     type: 'Frameworks/Libraries',
     list: [
       { text: 'React', img: React },
-      { text: 'Redux', img: Redux },
+      { text: 'Tailwind', img: Tailwind },
+      { text: 'Firebase', img: Firebase },
       { text: 'Unity', img: Unity },
     ],
   },

@@ -14,8 +14,8 @@ export default function About() {
           </p>
           <br />
           <p>
-            Aside from that, I love to do sports. I was a triathlon athlete for
-            6 years and currently what I do the most is running.
+            Aside from that, I love to do sports. I was a futsal player for 8
+            years and currently what I do the most is running.
           </p>
         </div>
       </div>
