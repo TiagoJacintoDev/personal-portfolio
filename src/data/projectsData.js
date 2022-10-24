@@ -4,12 +4,15 @@ import {
   SiCss3,
   SiStyledcomponents,
   SiFramer,
+  SiTailwindcss,
+  SiFirebase,
 } from 'react-icons/si';
 import CVMaker from '../images/cv-maker.png';
 import TravelLandingPage from '../images/travel-landing-page.png';
 import GitHubSearch from '../images/github-search.png';
 import RentACarLandingPage from '../images/rent-a-car-landing-page.png';
 import DogWiki from '../images/dog-wiki-app.vercel.app_.png';
+import EcommerceApp from '../images/Ecommerce_App.png';
 
 export const projectsData = [
   {
@@ -126,5 +129,37 @@ export const projectsData = [
     demoURL: 'https://dog-wiki-app.vercel.app/',
     codeURL: 'https://github.com/TiagoJacintoDev/dog-wiki',
     img: DogWiki,
+  },
+  {
+    title: 'Ecommerce',
+    skills: [
+      {
+        text: 'React',
+        img: <SiReact />,
+      },
+      {
+        text: 'Javascript',
+        img: <SiJavascript />,
+      },
+      {
+        text: 'Firebase',
+        img: <SiFirebase />,
+      },
+      {
+        text: 'Tailwind CSS',
+        img: <SiTailwindcss />,
+      },
+      {
+        text: 'React Query',
+      },
+      {
+        text: 'Axios',
+      },
+    ],
+    description:
+      'This application was inspired in the website KuantoKusta. This was a large project that taught me what are the pain points of building and scaling a large app.',
+    demoURL: 'https://ecommerce-tiago.vercel.app/',
+    codeURL: 'https://github.com/TiagoJacintoDev/ecommerce',
+    img: EcommerceApp,
   },
 ];
