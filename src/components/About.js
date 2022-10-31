@@ -1,10 +1,10 @@
 export default function About() {
   return (
-    <section className='about | container' id='about'>
-      <h1 className='section-title'>About Me</h1>
-      <div className='about'>
-        <div className='paragraph'>
-          <h2 className='sub-title'>I love building stuff 📱</h2>
+    <section className="about | container" id="about">
+      <h1 className="section-title">About Me</h1>
+      <div className="about">
+        <h2 className="sub-title">I love building stuff 📱</h2>
+        <div className="paragraph">
           <br />
           <p>
             I'm a self-taught front-end developer from Portugal. I enjoy turning

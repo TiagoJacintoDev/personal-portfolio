@@ -1,14 +1,14 @@
-import { skillsData } from '../data/skillsData';
+import { skillsData } from "../data/skillsData";
 
 export default function Skills() {
-  const skills = skillsData.map(item => (
-    <div className='skills-info'>
-      <h3 className='sub-title'>{item.type}</h3>
-      <div className='skills-card'>
-        {item.list.map(skill => (
-          <div className='skill'>
+  const skills = skillsData.map((item) => (
+    <div className="skills-info">
+      <h3 className="sub-title">{item.type}</h3>
+      <div className="skills-card">
+        {item.list.map((skill) => (
+          <div className="skill">
             <img src={skill.img} />
-            <p className='paragraph'>{skill.text}</p>
+            <p className="paragraph">{skill.text}</p>
           </div>
         ))}
       </div>
@@ -16,8 +16,8 @@ export default function Skills() {
   ));
 
   return (
-    <section className='skills | container' id='skills'>
-      <h1 className='section-title'>Skills</h1>
+    <section className="skills | container" id="skills">
+      <h1 className="section-title">Skills</h1>
       <div>{skills}</div>
     </section>
   );
