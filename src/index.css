@@ -349,6 +349,7 @@ nav {
 
 .skills-card {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.625rem;
   padding-block: 1rem;
 }
