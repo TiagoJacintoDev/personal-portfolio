@@ -2,17 +2,12 @@ import {
   SiReact,
   SiJavascript,
   SiCss3,
-  SiStyledcomponents,
-  SiFramer,
   SiTailwindcss,
   SiFirebase,
 } from "react-icons/si";
 import CVMaker from "../images/cv-maker.png";
-import TravelLandingPage from "../images/travel-landing-page.png";
 import GitHubSearch from "../images/github-search.png";
-import RentACarLandingPage from "../images/rent-a-car-landing-page.png";
-import DogWiki from "../images/dog-wiki-app.vercel.app_.png";
-import EcommerceApp from "../images/Ecommerce_App.png";
+import EcommerceApp from "../images/ecommerce.png";
 
 export const projectsData = [
   {
