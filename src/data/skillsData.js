@@ -25,7 +25,7 @@ export const skillsData = [
       { text: "HTML", img: HTML },
       { text: "CSS", img: CSS },
       { text: "JavaScript", img: JavaScript },
-      { text: "TypesScript", img: TypesScript },
+      { text: "TypeScript", img: TypesScript },
       { text: "C#", img: CSharp },
     ],
   },
