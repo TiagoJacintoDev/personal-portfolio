@@ -12,39 +12,33 @@ import GitHubSearch from "../images/github-search.png";
 import EcommerceApp from "../images/ecommerce.png";
 import GPT3 from "../images/gpt3.png";
 import WeatherApp from "../images/weather-app.png";
+import SneakerProductPage from "../images/sneaker-product-page.png";
 
 export const projectsData = [
   {
-    title: "Ecommerce",
+    title: "Sneaker Product Page",
     skills: [
       {
         text: "React",
         img: <SiReact />,
       },
       {
-        text: "Javascript",
-        img: <SiJavascript />,
-      },
-      {
-        text: "Firebase",
-        img: <SiFirebase />,
+        text: "TypeScript",
+        img: <SiTypescript />,
       },
       {
         text: "Tailwind CSS",
         img: <SiTailwindcss />,
       },
       {
-        text: "React Query",
-      },
-      {
-        text: "Axios",
+        text: "React Responsive",
       },
     ],
     description:
-      "This application was inspired in the website KuantoKusta. This was a large project that taught me what are the pain points of building and scaling a large app.",
-    demoURL: "https://ecommerce-tiago.vercel.app/",
-    codeURL: "https://github.com/TiagoJacintoDev/ecommerce",
-    img: EcommerceApp,
+      "This application was inspired by a design made by the Frontend Mentor team. I've used the same design and tried to replicate the same functionality. I've used the React Responsive library to make the application responsive.",
+    demoURL: "https://sneaker-product-page-tiago.vercel.app/",
+    codeURL: "https://github.com/TiagoJacintoDev/sneaker-product-page",
+    img: SneakerProductPage,
   },
   {
     title: "GPT-3 Landing Page",
