@@ -377,6 +377,7 @@ nav {
 
 .project {
   display: grid;
+  align-items: center;
   gap: 4rem;
 }
 .project:not(:last-child) {

@@ -9,10 +9,10 @@ import {
 } from "react-icons/si";
 import CVMaker from "../images/cv-maker.png";
 import GitHubSearch from "../images/github-search.png";
-import EcommerceApp from "../images/ecommerce.png";
 import GPT3 from "../images/gpt3.png";
 import WeatherApp from "../images/weather-app.png";
 import SneakerProductPage from "../images/sneaker-product-page.png";
+import GitHubUsers from "../images/github-users.png";
 
 export const projectsData = [
   {
@@ -67,22 +67,6 @@ export const projectsData = [
     img: GPT3,
   },
   {
-    title: "CV Maker",
-    skills: [
-      {
-        text: "React",
-        img: <SiReact />,
-      },
-      { text: "JavaScript", img: <SiJavascript /> },
-      { text: "CSS Modules", img: <SiCss3 /> },
-    ],
-    description:
-      "A CV Maker app that updates/changes the CV when you type your information out. With this project I've worked mostly with a large state management and controlled inputs.",
-    demoURL: "https://cv-makerapp.vercel.app/",
-    codeURL: "https://github.com/TiagoJacintoDev/cv-maker",
-    img: CVMaker,
-  },
-  {
     title: "Weather App",
     skills: [
       {
@@ -108,25 +92,41 @@ export const projectsData = [
     img: WeatherApp,
   },
   {
-    title: "GitHub Search",
+    title: "GitHub Users",
     skills: [
       {
         text: "React",
         img: <SiReact />,
       },
       {
-        text: "JavaScript",
-        img: <SiJavascript />,
+        text: "TypeScript",
+        img: <SiTypescript />,
       },
       {
-        text: "CSS",
-        img: <SiCss3 />,
+        text: "Tailwind CSS",
+        img: <SiTailwindcss />,
       },
     ],
     description:
-      "In this app I've worked with the GitHub Search API to make a search application with the API. With this application I've improved my skills with fetching data from APIs, changing and filtering state, debouncing functions and pagination",
-    demoURL: "https://github-searchapp.vercel.app/",
-    codeURL: "https://github.com/TiagoJacintoDev/github-search-api",
-    img: GitHubSearch,
+      "In this app I've worked with the GitHub Search API to make a calls to their API. With this application I've improved my skills with fetching data from APIs",
+    demoURL: "https://github-users-pt.vercel.app/",
+    codeURL: "https://github.com/TiagoJacintoDev/github-users",
+    img: GitHubUsers,
+  },
+  {
+    title: "CV Maker",
+    skills: [
+      {
+        text: "React",
+        img: <SiReact />,
+      },
+      { text: "JavaScript", img: <SiJavascript /> },
+      { text: "CSS Modules", img: <SiCss3 /> },
+    ],
+    description:
+      "A CV Maker app that updates/changes the CV when you type your information out. With this project I've worked mostly with a large state management and controlled inputs.",
+    demoURL: "https://cv-makerapp.vercel.app/",
+    codeURL: "https://github.com/TiagoJacintoDev/cv-maker",
+    img: CVMaker,
   },
 ];
